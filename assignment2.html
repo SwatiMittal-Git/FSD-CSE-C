@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+    }
+
+    nav {
+      background:rgb(29, 92, 240);
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .booking-form {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 45%;
+    }
+
+    .booking-form h3 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .booking-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .booking-form input, 
+    .booking-form select, 
+    .booking-form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .booking-form button {
+      background: #0078d7;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .booking-form button:hover {
+      background: #005fa3;
+    }
+
+    .bus-image {
+      width: 45%;
+    }
+
+    .bus-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .booking-form, .bus-image {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Bus Booking</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Bookings</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="booking-form">
+      <h3>Welcome to Bus Booking System</h3>
+      <form>
+        <label for="name">User Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="from">User Password</label>
+        <input type="password" id="from" placeholder="Departure city" required>
+
+        <label for="to">To</label>
+        <input type="text" id="to" placeholder="Destination city" required>
+
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" required>
+
+        <label for="seats">Number of Seats</label>
+        <select id="seats">
+          <option value="1">1 Seat</option>
+          <option value="2">2 Seats</option>
+          <option value="3">3 Seats</option>
+          <option value="4">4 Seats</option>
+        </select>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+
+    <div class="bus-image">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2025/5/515246579/OD/MO/VZ/195676118/ac-bus-new-deluxe-sleeper-coach-bus-body-1000x1000.jpeg" alt="Bus Image">
+    </div>
+  </div>
+
+</body>
+</html>
