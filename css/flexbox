@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            background-color: bisque;
+            height: 30px;
+            width: 30px;
+            font-size: 30px;
+            color: blue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        #qqq{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="a">1</div>
+    <div class="a">2</div>
+    <div class="a">3</div>
+</body>
+</html>
