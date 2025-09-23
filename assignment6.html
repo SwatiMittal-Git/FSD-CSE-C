@@ -1,62 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Multiplication Tables</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h2>Multiplication Tables</h2>
-
-  <label>Enter first number: </label>
-  <input type="number" id="num1"><br><br>
-
-  <label>Enter second number: </label>
-  <input type="number" id="num2"><br><br>
-
-  <button onclick="generateTables()">Generate Tables</button>
-
-  <h3>Table 1</h3>
-  <div id="table1"></div>
-
-  <h3>Table 2</h3>
-  <div id="table2"></div>
-
-  <h3>Even Numbers:</h3>
-  <div id="evens"></div>
-
-  <h3>Odd Numbers:</h3>
-  <div id="odds"></div>
-
-  <script>
-    function generateTables() {
-      let n1 = parseInt(document.getElementById("num1").value);
-      let n2 = parseInt(document.getElementById("num2").value);
-
-      if (isNaN(n1) || isNaN(n2)) {
-        alert("Please enter both numbers!");
-        return;
-      }
-
-      let t1 = "";
-      let t2 = "";
-      let evenNumbers = [];
-      let oddNumbers = [];
-
-      for (let i = 1; i <= 10; i++) {
-        let res1 = n1 * i;
-        let res2 = n2 * i;
-
-        t1 += res1 + "<br>";
-        t2 += res2 + "<br>";
-
-        if (res1 % 2 === 0) evenNumbers.push(res1); else oddNumbers.push(res1);
-        if (res2 % 2 === 0) evenNumbers.push(res2); else oddNumbers.push(res2);
-      }
-
-      document.getElementById("table1").innerHTML = t1;
-      document.getElementById("table2").innerHTML = t2;
-      document.getElementById("evens").innerHTML = evenNumbers.join(", ");
-      document.getElementById("odds").innerHTML = oddNumbers.join(", ");
-    }
-  </script>
+    <script>
+        let a = prompt("Enter num1");
+         let b = prompt("Enter num2");
+         var i,j;
+         let odd =[];
+         let even = [];
+         for(i=1;i<=10;i++){
+            let res = a*i;
+            document.write(res+"<br>");
+            if(res%2==0){
+                even.push(res);
+            }else{
+                odd.push(res);
+            }
+         }
+        
+           for(j=1;j<=10;j++){
+      let res = b*j;
+            document.write(res+"<br>");
+            if(res%2==0){
+                even.push(res);
+            }else{
+                odd.push(res);
+            }
+         }
+             document.write("Even : -<br>");
+         for(let i=0;i<even.length;i++){
+              document.write(even[i]+" ");
+         }
+         document.write("<br>");
+         document.write("Odd : -<br>");
+         for(let i=0;i<odd.length;i++){
+              document.write(odd[i]+" ");
+         }
+    </script>
 </body>
 </html>
